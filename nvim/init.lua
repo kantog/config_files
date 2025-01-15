@@ -60,7 +60,7 @@ vim.keymap.set('n', '<leader>-', '<C-x>', {desc = "Decrement number"})
 vim.keymap.set('n', '<leader>v', ':vsplit | lua vim.lsp.buf.definition()<CR>')
 vim.keymap.set('n', '<leader>i', ':vsplit | lua vim.lsp.buf.implementation()<CR>')
 vim.keymap.set('n', '<leader>d', ':vsplit | lua vim.lsp.buf.declaration()<CR>')
-vim.keymap.set('n', '<leader>rn', 'lua vim.lsp.buf.rename';
+vim.keymap.set('n', '<leader>rn', 'lua vim.lsp.buf.rename')
 
 -- Append semicolon function
 vim.keymap.set('n', ';', function()
