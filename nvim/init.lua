@@ -41,8 +41,9 @@ vim.g.mapleader = " "
 vim.keymap.set('i', 'ii', '<Esc>')
 vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('n', '<S-S>', ':w<CR>')
-vim.keymap.set('n', '<leader>w', ':w<CR>')
+vim.keymap.set('n', '<leader>w', ':w<CR> | :mksession!<CR>') --save and create mksession
 vim.keymap.set('n', '<leader>x', ':x<CR>')
+vim.keymap.set('n', '<leader><Esc>', ':q<CR>')
 vim.keymap.set('n', '<Up>', '<C-W>k')
 vim.keymap.set('n', '<Down>', '<C-W>j')
 vim.keymap.set('n', '<Left>', '<C-W>h')
@@ -59,7 +60,7 @@ vim.keymap.set('n', '<leader>-', '<C-x>', {desc = "Decrement number"})
 vim.keymap.set('n', '<leader>v', ':vsplit | lua vim.lsp.buf.definition()<CR>')
 vim.keymap.set('n', '<leader>i', ':vsplit | lua vim.lsp.buf.implementation()<CR>')
 vim.keymap.set('n', '<leader>d', ':vsplit | lua vim.lsp.buf.declaration()<CR>')
-vim.keymap.set('n', '<leader>z', '<C-z>')
+vim.keymap.set('n', '<leader>rn', 'lua vim.lsp.buf.rename';
 
 -- Append semicolon function
 vim.keymap.set('n', ';', function()
