@@ -6,36 +6,16 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # BASIL: Adding fzf to my Path in order to make the fzf work. Done by chatgpt.
 export PATH="$HOME/.local/fzf/bin:$PATH"
-
 # BASIL: Adding clangd to Path after downloading it manually.
 export PATH="$HOME/clangd_20.1.0/bin:$PATH"
+# BASIL: Adding kitty to Path after downloading it manually.
+export PATH="$HOME/.local/kitty.app/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="jonathan"
-
-alias rm="echo 'Are you sure you want to remove? Use tt instead'; rm -i"
-alias mv="mv -i"
-alias cp="cp -i"
-alias tt='mv -i -t ~/.trash/ $@'
-alias so_long="cd ~/common_core/Projects/so_long"
-alias gnl="cd ~/common_core/Projects/get_next_line"
-alias ft_printf="cd ~/common_core/Projects/ft_printf"
-alias libft="cd ~/common_core/Projects/libft"
-alias push_swap="cd ~/common_core/Projects/push_swap"
-alias mini_talk="cd ~/common_core/Projects/mini_talk"
-alias philo="cd ~/Projects/philo"
-alias minishell="cd ~/github_kantog/minishell"
-alias minirt="cd ~/github_kantog/minirt_with_alex"
-alias nv="~nvim() {
-    ~/nvim.appimage$@
-}"
-alias ff="firefox &"
-alias nvo="nvim -O"
-alias cdo="cd $OLDPWD"
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -131,10 +111,10 @@ export USER
 MAIL=bclaeys@student.s19.be
 export MAIL
 
-alias francinette=/nfs/homes/bclaeys/francinette/tester.sh
-alias paco=/nfs/homes/bclaeys/francinette/tester.sh
-alias nv=~/nvim.appimage
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source $HOME/dotfiles_github_kantog/alias

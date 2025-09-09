@@ -16,10 +16,11 @@ vim.opt.incsearch = true
 vim.opt.path:append("common_core/projects/")
 vim.opt.showcmd = true
 vim.opt.wrap = false
--- vim.opt.foldmethod = "syntax"
+vim.opt.foldmethod = "manual"
+vim.opt.foldenable = false
 -- vim.cmd('autocmd BufRead * normal! zR')
 vim.opt.laststatus = 2
-  vim.opt.backspace = { "indent", "eol", "start" }
+vim.opt.backspace = { "indent", "eol", "start" }
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "80"
 vim.opt.termguicolors = true
@@ -42,7 +43,8 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
 -- ----------------------------------------------
 
 -- Sync clipboard between OS and Neovim.
-vim.o.clipboard = "unnamedplus"
+-- vim.o.clipboard = "unnamedplus"
+vim.api.nvim_set_option("clipboard", "unnamed")
 
 -- Enable break indent
 vim.o.breakindent = true

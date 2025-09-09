@@ -1,0 +1,28 @@
+alias rm="echo 'Are you sure you want to remove? Use tt instead'; rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
+alias tt='mv -i -t ~/.trash/ $@'
+alias so_long="cd ~/common_core/Projects/so_long"
+alias gnl="cd ~/common_core/Projects/get_next_line"
+alias ft_printf="cd ~/common_core/Projects/ft_printf"
+alias libft="cd ~/common_core/Projects/libft"
+alias push_swap="cd ~/common_core/Projects/push_swap"
+alias mini_talk="cd ~/common_core/Projects/mini_talk"
+alias philo="cd ~/Projects/philo"
+alias minishell="cd ~/github_kantog/minishell"
+alias minirt="cd ~/github_kantog/minirt_with_alex"
+alias nv="~nvim() {
+    ~/nvim.appimage$@
+}"
+alias ff="firefox &"
+alias nvo="nvim -O"
+alias cdo="cd $OLDPWD"
+alias dr="docker compose down; docker compose build; docker compose up -d"
+alias rotl="xrandr --output HDMI-2 --rotate left"
+alias rotr="xrandr --output HDMI-2 --rotate right"
+alias rotn="xrandr --output HDMI-2 --rotate normal"
+alias aka="nvim $HOME/dotfiles_github_kantog/alias; \
+	source $HOME/dotfiles_github_kantog/alias; \
+	echo 'Aliases updated!' "
+alias nv=~/nvim.appimage
+alias test="echo test"
